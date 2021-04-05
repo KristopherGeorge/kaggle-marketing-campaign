@@ -1,0 +1,19 @@
+echo "Environment Activated"
+
+env_name=kaggle_marketing_campaign2
+
+conda create -y --name $env_name python=3.7.0
+conda activate $env_name
+
+echo "Packages Installed"
+
+
+pip install -r requirements.txt 
+conda install -y altair 
+pip install jupyterlab
+
+python -m pip install ipykernel
+python -m ipykernel install --user --name=$env_name
+
+
+
